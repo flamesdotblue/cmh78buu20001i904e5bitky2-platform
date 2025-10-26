@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const packages = [
   {
     id: 1,
@@ -38,12 +40,12 @@ export default function Packages() {
               <p className="mt-1 text-sm text-gray-600">{p.subtitle}</p>
               <div className="mt-4 flex items-center justify-between">
                 <span className="text-base font-medium text-[#006D77]">{p.price}</span>
-                <a
-                  href={p.href}
+                <Link
+                  to={p.href}
                   className="inline-flex items-center rounded-full bg-[#E29578] px-4 py-2 text-sm font-medium text-white hover:opacity-95"
                 >
                   View Details
-                </a>
+                </Link>
               </div>
             </div>
           </article>
